@@ -1,0 +1,25 @@
+[0.323s] Invoking command in '/home/yide/ros2_tutorial_ws/src/ur3e_basics': PYTHONPATH=/home/yide/ros2_tutorial_ws/build/ur3e_basics/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/yide/ros2_tutorial_ws/install/ur3e_basics/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ur3e_basics build --build-base /home/yide/ros2_tutorial_ws/build/ur3e_basics/build install --record /home/yide/ros2_tutorial_ws/build/ur3e_basics/install.log --single-version-externally-managed install_data
+[0.437s] running egg_info
+[0.437s] writing ../../build/ur3e_basics/ur3e_basics.egg-info/PKG-INFO
+[0.437s] writing dependency_links to ../../build/ur3e_basics/ur3e_basics.egg-info/dependency_links.txt
+[0.437s] writing entry points to ../../build/ur3e_basics/ur3e_basics.egg-info/entry_points.txt
+[0.437s] writing requirements to ../../build/ur3e_basics/ur3e_basics.egg-info/requires.txt
+[0.437s] writing top-level names to ../../build/ur3e_basics/ur3e_basics.egg-info/top_level.txt
+[0.439s] reading manifest file '../../build/ur3e_basics/ur3e_basics.egg-info/SOURCES.txt'
+[0.439s] writing manifest file '../../build/ur3e_basics/ur3e_basics.egg-info/SOURCES.txt'
+[0.439s] running build
+[0.439s] running build_py
+[0.439s] copying ur3e_basics/joint_commander.py -> /home/yide/ros2_tutorial_ws/build/ur3e_basics/build/lib/ur3e_basics
+[0.439s] running install
+[0.439s] running install_lib
+[0.439s] copying /home/yide/ros2_tutorial_ws/build/ur3e_basics/build/lib/ur3e_basics/joint_commander.py -> /home/yide/ros2_tutorial_ws/install/ur3e_basics/lib/python3.10/site-packages/ur3e_basics
+[0.440s] byte-compiling /home/yide/ros2_tutorial_ws/install/ur3e_basics/lib/python3.10/site-packages/ur3e_basics/joint_commander.py to joint_commander.cpython-310.pyc
+[0.440s] running install_data
+[0.440s] running install_egg_info
+[0.441s] removing '/home/yide/ros2_tutorial_ws/install/ur3e_basics/lib/python3.10/site-packages/ur3e_basics-0.0.0-py3.10.egg-info' (and everything under it)
+[0.441s] Copying ../../build/ur3e_basics/ur3e_basics.egg-info to /home/yide/ros2_tutorial_ws/install/ur3e_basics/lib/python3.10/site-packages/ur3e_basics-0.0.0-py3.10.egg-info
+[0.441s] running install_scripts
+[0.452s] Installing joint_commander script to /home/yide/ros2_tutorial_ws/install/ur3e_basics/lib/ur3e_basics
+[0.452s] Installing joint_listener script to /home/yide/ros2_tutorial_ws/install/ur3e_basics/lib/ur3e_basics
+[0.452s] writing list of installed files to '/home/yide/ros2_tutorial_ws/build/ur3e_basics/install.log'
+[0.464s] Invoked command in '/home/yide/ros2_tutorial_ws/src/ur3e_basics' returned '0': PYTHONPATH=/home/yide/ros2_tutorial_ws/build/ur3e_basics/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/yide/ros2_tutorial_ws/install/ur3e_basics/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ur3e_basics build --build-base /home/yide/ros2_tutorial_ws/build/ur3e_basics/build install --record /home/yide/ros2_tutorial_ws/build/ur3e_basics/install.log --single-version-externally-managed install_data
