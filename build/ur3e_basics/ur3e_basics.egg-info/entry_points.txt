@@ -1,4 +1,0 @@
-[console_scripts]
-joint_commander = ur3e_basics.joint_commander:main
-joint_listener = ur3e_basics.joint_listener:main
-
