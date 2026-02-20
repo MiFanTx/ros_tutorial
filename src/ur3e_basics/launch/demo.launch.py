@@ -1,5 +1,7 @@
 from launch import LaunchDescription
 from launch_ros.actions import Node
+import os
+from ament_index_python.packages import get_package_share_directory
 
 
 def generate_launch_description():
@@ -10,6 +12,13 @@ def generate_launch_description():
     # - package='ur3e_basics'
     # - executable='joint_listener'
     # - output='screen' (so you see the logs)
+
+    config = os.path.join(
+        get_package_share_directory('ur3e_basics'),
+        'config', 
+        'robot_params.yaml'
+    )
+
     listener_node = Node(
         package='ur3e_basics',
         executable='joint_listener',
@@ -21,7 +30,8 @@ def generate_launch_description():
     commander_node = Node(
         package='ur3e_basics',
         executable='joint_commander',
-        output='screen'
+        output='screen',
+        parameters=[config] # Load parameters from YAML file
     )
     
     # TODO 3: Return LaunchDescription with both nodes

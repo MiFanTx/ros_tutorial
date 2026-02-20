@@ -1,0 +1,8 @@
+joint_commander:
+  ros__parameters:
+    publish_rate: 10.0
+    amplitude: 1.0
+
+joint_listener:
+  ros__parameters:
+    log_frequency: 2.0
