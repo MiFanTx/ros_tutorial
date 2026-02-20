@@ -22,19 +22,26 @@ class JointCommander(Node):
     
     def __init__(self):
         super().__init__('joint_commander')
-        
-        # TODO 1: Create publisher on '/joint_commands' topic
-        # Hint: self.create_publisher(MessageType, '/topic_name', queue_size)
-        # Use JointState message, queue_size = 10
 
         self.publisher = self.create_publisher(JointState, '/joint_commands', 10)
+
+        # TODO 1: Declare parameters
+        # Hint: self.declare_parameter('name', default_value)
+        self.declare_parameter('publish_rate', 10.0)
+        self.declare_parameter('amplitude', 1.0)
         
+        # TODO 2: Get parameter values
+        # Hint: self.get_parameter('name').value
+        self.publish_rate = self.get_parameter('publish_rate').value
+        self.amplitude = self.get_parameter('amplitude').value
         
-        # TODO 2: Create timer to publish at 10 Hz (every 0.1 seconds)
-        # Hint: self.create_timer(timer_period_sec, callback_function)
-        # timer_period = 0.1 for 10 Hz
-        # callback = self.timer_callback
-        self.timer = self.create_timer(0.1, self.timer_callback)
+        # TODO 3: Use publish_rate to calculate timer period
+        # Hint: period = 1.0 / rate
+        self.period = 1.0 / self.publish_rate
+
+
+        # TODO 4: Store amplitude for use in callback
+        self.timer = self.create_timer(self.period, self.timer_callback)
         
         self.counter = 0.0  # For generating sine wave
         self.get_logger().info('Joint commander started! Publishing commands...')
@@ -48,17 +55,8 @@ class JointCommander(Node):
         # Create message
         msg = JointState()
         
-        # TODO 3: Fill in the message fields
-        # msg.name = ['shoulder_pan_joint']  # Joint name
-        # msg.position = [value]  # Target position in radians
-        # 
-        # Generate sine wave: amplitude * sin(counter)
-        # amplitude = 1.0 (move ±1 radian)
-        # Use: math.sin(self.counter)
-        # Increment counter: self.counter += 0.1
-        
         msg.name = ['shoulder_pan_joint']
-        msg.position = [1.0 * math.sin(self.counter)]
+        msg.position = [self.amplitude * math.sin(self.counter)]
         self.counter += 0.1
 
         

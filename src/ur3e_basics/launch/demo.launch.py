@@ -13,6 +13,7 @@ def generate_launch_description():
     listener_node = Node(
         package='ur3e_basics',
         executable='joint_listener',
+        remappings=[('/joint_states','/joint_commands')],
         output='screen'
     )
     
