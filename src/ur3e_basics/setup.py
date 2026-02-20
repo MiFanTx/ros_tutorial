@@ -30,7 +30,8 @@ setup(
     entry_points={
         'console_scripts': [
             'joint_listener = ur3e_basics.joint_listener:main',
-            'joint_commander = ur3e_basics.joint_commander:main'
+            'joint_commander = ur3e_basics.joint_commander:main',
+            'pick_place_server = ur3e_basics.pick_place_server:main',
         ],
     },
 )
