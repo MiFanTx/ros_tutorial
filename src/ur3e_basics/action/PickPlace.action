@@ -1,0 +1,25 @@
+# === GOAL ===
+string object_id
+geometry_msgs/PoseStamped object_pose
+geometry_msgs/PoseStamped target_pose
+float64 gripper_width
+
+---
+
+# === RESULT ===
+uint8 status
+string message
+float64 total_time_sec
+
+# Status constants
+uint8 STATUS_SUCCESS = 0
+uint8 STATUS_FAILURE = 1
+uint8 STATUS_ABORTED = 2
+uint8 STATUS_CANCELED = 3
+
+---
+
+# === FEEDBACK ===
+string current_stage
+float32 progress_percent
+string status_message

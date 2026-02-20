@@ -36,6 +36,8 @@ class JointCommander(Node):
         
         self.create_service(Trigger, 'reset_counter', self.reset_callback)
 
+        self.add_on_set_parameters_callback(self.parameter_callback)
+
         # TODO 2: Create timer to publish at 10 Hz (every 0.1 seconds)
         # Hint: self.create_timer(timer_period_sec, callback_function)
         # timer_period = 0.1 for 10 Hz
@@ -61,8 +63,6 @@ class JointCommander(Node):
 
         # Publish
         self.publisher.publish(msg)
-
-        self.add_on_set_parameters_callback(self.parameter_callback)
 
         # Log occasionally (not every message - too much!)
         if int(self.counter * 10) % 20 == 0:  # Every 2 seconds
