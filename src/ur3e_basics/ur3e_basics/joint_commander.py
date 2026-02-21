@@ -38,10 +38,6 @@ class JointCommander(Node):
 
         self.add_on_set_parameters_callback(self.parameter_callback)
 
-        # TODO 2: Create timer to publish at 10 Hz (every 0.1 seconds)
-        # Hint: self.create_timer(timer_period_sec, callback_function)
-        # timer_period = 0.1 for 10 Hz
-        # callback = self.timer_callback
         self.timer = self.create_timer(self.period, self.timer_callback)
         
         self.counter = 0.0  # For generating sine wave
@@ -59,7 +55,6 @@ class JointCommander(Node):
         msg.name = ['shoulder_pan_joint']
         msg.position = [self.amplitude * math.sin(self.counter)]
         self.counter += 0.1
-
 
         # Publish
         self.publisher.publish(msg)
