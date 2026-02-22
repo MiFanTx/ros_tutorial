@@ -20,14 +20,9 @@ class JointListener(Node):
     """
     
     def __init__(self):
-        # TODO 1: Initialize the node with name 'joint_listener'
-        # Hint: Use super().__init__('???')
-
         super().__init__('joint_listener')
         self.get_logger().info('Initializing Joint Listener Node...')
         
-        # TODO 2: Create subscription to /joint_states topic
-        # Hint: self.create_subscription(MessageType, '/topic_name', self.callback_name, queue_size)
         # - MessageType is imported at top
         # - callback_name is the method below
         # - queue_size = 10 is standard
@@ -50,7 +45,6 @@ class JointListener(Node):
         - msg.position: [0.5, -1.2, 0.8, ...]  (radians)
         """
         
-        # TODO 3: Find and print the shoulder_pan_joint position
         # Steps:
         # 1. Loop through msg.name with enumerate to get index
         # 2. Check if joint_name == 'shoulder_pan_joint'

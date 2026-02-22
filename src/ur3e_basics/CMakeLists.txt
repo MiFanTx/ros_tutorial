@@ -25,6 +25,8 @@ install(PROGRAMS
   ur3e_basics/pick_place_server.py
   ur3e_basics/detection_publisher.py
   ur3e_basics/detection_filter.py
+  ur3e_basics/static_camera_tf.py
+  ur3e_basics/rotating_platform_tf.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

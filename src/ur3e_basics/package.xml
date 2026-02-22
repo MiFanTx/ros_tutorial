@@ -4,7 +4,7 @@
   <name>ur3e_basics</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
-  <maintainer email="yide@todo.todo">yide</maintainer>
+  <maintainer email="mifantx@hotmail.com">yide</maintainer>
   <license>TODO: License declaration</license>
 
   <depend>rclpy</depend>
@@ -14,6 +14,7 @@
   <depend>std_msgs</depend>
   <depend>geometry_msgs</depend>
   <depend>builtin_interfaces</depend>
+  <depend>tf2_ros</depend>
 
   <buildtool_depend>rosidl_default_generators</buildtool_depend>
   <exec_depend>rosidl_default_runtime</exec_depend>
