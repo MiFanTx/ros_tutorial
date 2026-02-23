@@ -41,32 +41,19 @@ class TFListenerNode(Node):
         self.test_point.header.stamp = self.get_clock().now().to_msg()
         
         try:
-            # TODO: Lookup transform from camera_link to base_link
-            # Hint: transform = self.tf_buffer.lookup_transform(
-            #           'base_link',           # Target frame
-            #           'camera_link',         # Source frame  
-            #           rclpy.time.Time()      # Latest available
-            #       )
-
             transform = self.tf_buffer.lookup_transform(
                 'base_link',
                 'camera_link',
                 rclpy.time.Time()
             )
-            
-            # TODO: Transform the point
-            # Hint: transformed_point = tf2_geometry_msgs.do_transform_point(
-            #           self.test_point, transform)
 
             transformed_point = tf2_geometry_msgs.do_transform_point(
                 self.test_point, transform)
             
-            # TODO: Log both original and transformed points
-            # self.get_logger().info(
-            #     f'Point in camera_link: ({self.test_point.point.x:.2f}, ...)'
-            #     f' → base_link: ({transformed_point.point.x:.2f}, ...)'
-            # )
-            pass
+            self.get_logger().info(
+                f'Point in camera_link: ({self.test_point.point.x:.2f}, {self.test_point.point.y:.2f}, {self.test_point.point.z:.2f})'
+                f' → base_link: ({transformed_point.point.x:.2f}, {transformed_point.point.y:.2f}, {transformed_point.point.z:.2f},)'
+            )
             
         except TransformException as ex:
             self.get_logger().warn(f'Could not get transform: {ex}')

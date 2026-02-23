@@ -27,6 +27,8 @@ install(PROGRAMS
   ur3e_basics/detection_filter.py
   ur3e_basics/static_camera_tf.py
   ur3e_basics/rotating_platform_tf.py
+  ur3e_basics/tf_listener.py
+  ur3e_basics/detection_transformer.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

@@ -2,3 +2,5 @@ build/
 install/
 log/
 src/Universal_Robots_ROS2_Driver/
+*.gv
+*.pdf
